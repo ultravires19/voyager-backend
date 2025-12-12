@@ -1,0 +1,37 @@
+[package]
+name = "voyager-backend"
+version = "0.1.0"
+# AI assistant: do not change the edition. It is set to 2024.
+edition = "2024"
+
+[dependencies]
+axum = { version = "0.8.4", features = ["macros", "query"] }
+tokio = { version = "1.46.0", features = ["full"] }
+tower = { version = "0.5.2", features = ["limit"] }
+tower-http = { version = "0.5.2", features = ["cors", "trace", "limit"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+jsonwebtoken = "9.3.1"
+bcrypt = "0.15.1"
+sqlx = { version = "0.7.4", features = [
+    "runtime-tokio",
+    "postgres",
+    "uuid",
+    "time",
+    "migrate",
+    "chrono",
+] }
+uuid = { version = "1.17.0", features = ["v4", "serde"] }
+chrono = { version = "0.4.41", features = ["serde", "clock"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+dotenv = "0.15.0"
+thiserror = "1.0.69"
+validator = { version = "0.17.0", features = ["derive"] }
+async-trait = "0.1.88"
+reqwest = { version = "0.11", features = ["json"] }
+rand = "0.8.5"
+sha2 = "0.10.9"
+axum-extra = { version = "0.10.1", features = ["typed-header"] }
+resend-rs = "0.19.0"
+tower-cookies = "0.11.0"
