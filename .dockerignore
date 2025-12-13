@@ -1,0 +1,39 @@
+# Build artifacts
+target/
+**/*.rs.bk
+*.pdb
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# Env files (set in Coolify)
+.env
+.env.*
+*.local
+
+# Docs
+README.md
+docs/
+*.md
+LICENSE
+
+# Tests
+tests/
+**/*_test.rs
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# Logs
+*.log
+*.db
