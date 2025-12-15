@@ -1,4 +1,8 @@
 /target
 .env
 notes
-.DS_store
+.DS_Store
+**/*.rs.bk
+Cargo.lock
+.idea
+.vscode
