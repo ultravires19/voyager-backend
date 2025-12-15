@@ -4,7 +4,7 @@
 pub mod auth;
 
 use axum::{Router, http, routing::get};
-use tower_http::cors::{Any, CorsLayer};
+use tower_http::cors::{AllowOrigin, Any, CorsLayer};
 
 use crate::AppState;
 
@@ -12,7 +12,7 @@ use crate::AppState;
 pub fn routes() -> Router<AppState> {
     // Configure CORS for development
     let cors = CorsLayer::new()
-        .allow_origin(Any)
+        .allow_origin(AllowOrigin::mirror_request())
         .allow_methods([
             http::Method::GET,
             http::Method::POST,
